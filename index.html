@@ -205,11 +205,18 @@
     }
     .hero-bg {
       position:absolute; inset:0;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,165,106,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(201,165,106,0.04) 0%, transparent 50%),
-        linear-gradient(160deg, #111111 0%, #0A0A0A 50%, #0F0E0C 100%);
+      background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80&fit=crop&crop=center');
+      background-size: cover;
+      background-position: center 30%;
       z-index:0;
+    }
+    .hero-bg::after {
+      content:'';
+      position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,165,106,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 80% at 10% 80%, rgba(201,165,106,0.04) 0%, transparent 50%),
+        linear-gradient(160deg, rgba(8,8,8,0.94) 0%, rgba(10,10,10,0.88) 50%, rgba(12,11,9,0.94) 100%);
     }
     .hero-lines { position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
     .hero-lines::before, .hero-lines::after {
